@@ -50,7 +50,8 @@ class FileUploadModel extends \yii\base\Model
     public function getFileName()
     {
         if (!$this->_fileName) {
-            $fileName = uniqid(md5(rand()), true);
+            $fileName = substr(uniqid(md5(rand()), true), 0, 10);
+            $fileName .= '-' . Inflector::slug($this->file->baseName);
             $fileName .= '.' . $this->file->extension;
             $this->_fileName = $fileName;
         }
