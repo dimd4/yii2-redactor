@@ -39,7 +39,7 @@ class RedactorModule extends \yii\base\Module
         $request = Yii::$app->request;
         $subfolder = $request->get('subfolder', $this->subfolderName);
         if(!empty($subfolder))
-            $subfolder = DIRECTORY_SEPARATOR . $subfolder;
+            $subfolder = '/' . $subfolder;
 
         return $subfolder;
     }
