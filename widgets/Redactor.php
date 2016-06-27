@@ -71,7 +71,6 @@ class Redactor extends InputWidget
         } else {
             echo Html::textarea($this->name, $this->value, $this->options);
         }
-        echo'<pre>'; var_dump($this); echo'</pre>';
     }
 
     /**
