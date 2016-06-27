@@ -14,7 +14,7 @@ namespace yii\redactor\widgets;
  */
 class RedactorAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/dimd/yii2-redactor/assets';
+    public $sourcePath = '@vendor/dimd4/yii2-redactor/assets';
     public $depends = ['yii\web\JqueryAsset'];
 
     public function init()
