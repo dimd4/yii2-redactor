@@ -38,6 +38,7 @@ class RedactorModule extends \yii\base\Module
     {
         $request = Yii::$app->request;
         $subfolder = $request->get('subfolder', $this->subfolderName);
+        $subfolder = preg_replace('/[^a-zA-Z]/', '', $subfolder);
         if(!empty($subfolder))
             $subfolder = '/' . $subfolder;
 

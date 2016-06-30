@@ -75,11 +75,11 @@ or config advanced redactor reference [Docs](http://imperavi.com/redactor/docs/)
 ])?>
 ```
 
-change default subfolder - optional
+change default subfolder - optional, name subfolder only [a-zA-Z]
 ```
 <?= $form->field($model, 'body')->widget(\yii\redactor\widgets\Redactor::className(), [
     'clientOptions' => [
-        'imageManagerJson' => ['/redactor/upload/image-json', 'subfolder' => 'news'],
+        'imageManagerJson' => ['/redactor/upload/image-json', 'subfolder' => 'news'], 
         'imageUpload' => ['/redactor/upload/image', 'subfolder' => 'news'],
         'fileUpload' => ['/redactor/upload/file', 'subfolder' => 'news'],
         'lang' => 'zh_cn',
